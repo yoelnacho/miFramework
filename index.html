@@ -5,6 +5,28 @@
 	<title>ajax</title>
 </head>
 <body>
-	Pruebas ajax
+	
+	<div class="result"></div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript">
+        
+        $(document).ready(function() {
+		    var loc = window.location;
+
+		    function leerjson() {
+	            // $.getJSON("datos/misdatos.json", function(datos) {
+	            //     alert("Dato: " + datos["dato"]);
+	            //     $.each(datos["primos"], function(idx,primo) {
+	            //         alert("Numero primo: " + primo);
+	            //     });
+	            // });
+	            $(".result").html(loc);
+	        }
+
+	        //leerjson();
+	        $(".result").html(loc);
+		});
+    </script>
 </body>
 </html>
