@@ -12,20 +12,18 @@
 	<script type="text/javascript">
         
         $(document).ready(function() {
-		    var loc = window.location;
 
 		    function leerjson() {
-	            // $.getJSON("datos/misdatos.json", function(datos) {
-	            //     alert("Dato: " + datos["dato"]);
-	            //     $.each(datos["primos"], function(idx,primo) {
-	            //         alert("Numero primo: " + primo);
-	            //     });
-	            // });
-	            $(".result").html(loc);
+	            $.getJSON("misdatos.json", function(datos) {
+	                alert("Dato: " + datos["dato"]);
+	                $.each(datos["primos"], function(idx,primo) {
+	                    alert("Numero primo: " + primo);
+	                });
+	            });
 	        }
 
-	        //leerjson();
-	        $(".result").html(loc);
+	        leerjson();
+	        
 		});
     </script>
 </body>
