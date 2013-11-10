@@ -7,6 +7,7 @@
 <body>
 	
 	<div class="result"></div>
+	<select name="mio" id="mio"></select>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -14,11 +15,22 @@
         $(document).ready(function() {
 
 		    function leerjson() {
-	            $.getJSON("misdatos.json", function(datos) {
-	                alert("Dato: " + datos["dato"]);
-	                $.each(datos["primos"], function(idx,primo) {
-	                    alert("Numero primo: " + primo);
-	                });
+	            $.getJSON("datos/misdatos.json", function(data) {
+	                
+	                //$.each(data["primos"], function(idx,primo) {
+	                // $(".result").html("<p>N&uacute;mero primo: " + primo + "</p>")
+	                //});
+	                
+	                // Imprime datos en un select
+	                for( datos in data.clientes ){
+                        $("#mio").append("<option>" + data.clientes[datos].nombre + "</option>")
+                    }
+                    
+                    // Imprime datos en div
+                    for( datos in data.clientes ){
+                        $(".result").append("<p>Nombre: " + data.clientes[datos].nombre + "</p>")
+                    }
+	                
 	            });
 	        }
 
@@ -26,5 +38,6 @@
 	        
 		});
     </script>
+    
 </body>
 </html>
