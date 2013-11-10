@@ -6,6 +6,7 @@
 </head>
 <body>
 	
+	<button id="boton" value="hicisteClick">press</button>
 	<div class="result"></div>
 	<select name="mio" id="mio"></select>
 
@@ -17,9 +18,19 @@
 		    function leerjson() {
 	            $.getJSON("datos/misdatos.json", function(data) {
 	                
-	                //$.each(data["primos"], function(idx,primo) {
-	                // $(".result").html("<p>N&uacute;mero primo: " + primo + "</p>")
+	                
+	                // Como usar each para reorrer un json?
+	                //$.each(data["mensaje"], function(id,mensaje) {
+	                    
 	                //});
+	                
+	                // Imprime todo lo que esté en mensaje
+	                $("#boton").on("click", function(){
+	                    var elValor = $(this).val(); // almacena el value
+	                    var elContenido = $(this).text(); // almacena en contenido
+	                    
+	                    alert(data["mensaje"] + elValor + " y su contenido es: " + elContenido);
+	                })	                
 	                
 	                // Imprime datos en un select
 	                for( datos in data.clientes ){

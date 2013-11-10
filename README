@@ -1,1 +1,4 @@
-Test ajax/json/jquery
+<h1>Test ajax/json/jquery</h1>
+
+<h3>Probando:</h3>
+Leer achivo Json con jQuery e imprimir su contenido dentro del DOM

@@ -1,5 +1,5 @@
 {
-    "dato": "Esto es un dato simple",
+    "mensaje": "El valor de la variable es: ",
     "primos": [ 1, 2, 3, 5, 7, 11, 13 ],
     "clientes": [
         {"nombre":"maria"},
